@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
+#import "BeaconRanging.h"
 
-@interface VisitorInteractController : UIViewController
+@interface VisitorInteractController : UIViewController<RangeBeaconDelegates>
+
+@property(nonatomic, strong) IBOutlet iCarousel *myCarousel;
 
 @end
