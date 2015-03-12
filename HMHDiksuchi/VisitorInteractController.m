@@ -8,12 +8,22 @@
 
 #import "VisitorInteractController.h"
 #import <CoreLocation/CoreLocation.h>
+
+
+#define Beacon1Message          @"We have notified your meeting host (EMPLOYEE NAME) that you’ve arrived. Before proceeding, please check in with the security desk to receive your visitor badge. (EMPLOYEE NAME) will contact you shortly.Please proceed to (X) floor after check in at security desk"
+
+#define Beacon2Message          @"Great job! Your meeting is on this floor! (EMPLOYEE NAME) will meet you here soon."
+#define Beacon3Message          @"Wrong Floor! Oops! \n Looks like you’ve landed on the wrong floor. This is the (4th) floor. Your meeting takes place on the (3rd) Floor."
+
+#define address                @"Hybris Sales Presentation \n10:00 AM Thursday, March 11\nJeurgensen, 3rd floor\njeff.rausch@hmhco.com"
+
+
 @interface VisitorInteractController ()<iCarouselDataSource,iCarouselDelegate>
 
 @property(nonatomic, strong) NSMutableArray     *beaconArray;
-@property(nonatomic, strong) NSMutableArray     *messagesArray;
+@property(nonatomic, strong) NSMutableArray     *messagesArray,*addressArray;
 @property(nonatomic, strong)  BeaconRanging         *beaconRanging;
-@property(nonatomic, strong) NSMutableDictionary  *messagesDict;
+@property(nonatomic, strong) NSMutableDictionary  *messagesDict,*addressDict;
 @end
 
 @implementation VisitorInteractController
@@ -21,22 +31,23 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.messagesDict = [[NSMutableDictionary alloc]init];
-    [self.messagesDict setObject:@"We have notified your meeting host (EMPLOYEE NAME) that you’ve arrived. Before proceeding, please check in with the security desk to receive your visitor badge. (EMPLOYEE NAME) will contact you shortly.Please proceed to (X) floor after check in at security desk" forKey:@"50148"];
-    [self.messagesDict setObject:@"Great job! Your meeting is on this floor! (EMPLOYEE NAME) will meet you here soon." forKey:@"46740"];
-    [self.messagesDict setObject:@"Wrong Floor! Oops! \n Looks like you’ve landed on the wrong floor. This is the (4th) floor. Your meeting takes place on the (3rd) Floor." forKey:@"61155"];
+    [self.messagesDict setObject:Beacon1Message forKey:@"50148"];
+    [self.messagesDict setObject:Beacon2Message forKey:@"46740"];
+    [self.messagesDict setObject:Beacon3Message forKey:@"61155"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myCarousel.delegate=self;
     self.myCarousel.dataSource=self;
-    self.myCarousel.type=iCarouselTypeCoverFlow;
-    
+    self.myCarousel.type=iCarouselTypeLinear;
+    self.myCarousel.clipsToBounds=YES;
     self.myCarousel.layer.borderWidth = 1.0;
     self.myCarousel.layer.borderColor = [[UIColor grayColor] CGColor];
     
     self.messagesArray = [[NSMutableArray alloc]init];
     self.beaconArray = [[NSMutableArray alloc]init];
+    self.addressArray = [[NSMutableArray alloc]init];
     // Do any additional setup after loading the view.
 }
 
@@ -57,26 +68,35 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
-    if(!view){
-        view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, carousel.frame.size.width, carousel.frame.size.height)];
-        UILabel *label = [[UILabel alloc]initWithFrame:view.frame];
-        view.backgroundColor=[UIColor lightGrayColor];
-        label.numberOfLines = 8;
-        NSDictionary *dict= [self.messagesArray objectAtIndex:index];
-        
-        label.text = [dict objectForKey:@"message"];
-        
-        [view addSubview:label];
-    }
+    view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, carousel.frame.size.width, carousel.frame.size.height)];
+    UILabel *label = [[UILabel alloc]initWithFrame:view.frame];
+    view.backgroundColor=[UIColor clearColor];
+    label.numberOfLines = 8;
+    label.textAlignment=NSTextAlignmentCenter;
+    NSDictionary *dict= [self.messagesArray objectAtIndex:index];
+    
+    label.text = [dict objectForKey:@"message"];
+    self.lbl_address.text=address;
+    [view addSubview:label];
     return view;
 }
 
+-(void)carouselDidEndDecelerating:(iCarousel *)carousel{
+ //   [self updateAddress:(int)carousel.currentItemIndex];
+}
+-(void)carouselDidScroll:(iCarousel *)carousel{
+   // [self updateAddress:(int)carousel.currentItemIndex];
+}
+-(void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+//    if(carousel.currentItemIndex >=0)
+//        [self updateAddress:(int)carousel.currentItemIndex];
+}
 -(void)initializeRanging{
     
     if(!self.beaconRanging){
         self.beaconRanging = [[BeaconRanging alloc]init];
         self.beaconRanging.rangeBeaconDelegate=self;
-        [self.beaconRanging startMonitoringWithProximityTypes:@[@(CLProximityNear)]];
+        [self.beaconRanging startMonitoringWithProximityTypes:@[@(CLProximityNear),@(CLProximityFar)]];
     }
 }
 
@@ -89,13 +109,19 @@
         if(![self.beaconArray containsObject:beacon.major]){
             [self.beaconArray addObject:beacon.major];
             
-            NSMutableDictionary *metaData = [[NSMutableDictionary alloc]init];
-            [metaData setObject:[self.messagesDict objectForKey:[NSString stringWithFormat:@"%@",beacon.major]] forKey:@"message"];
-            [self.messagesArray addObject:metaData];
+            NSMutableDictionary *metaDataMessage = [[NSMutableDictionary alloc]init];
+            [metaDataMessage setObject:[self.messagesDict objectForKey:[NSString stringWithFormat:@"%@",beacon.major]] forKey:@"message"];
+            [self.messagesArray addObject:metaDataMessage];
+
             [self.myCarousel insertItemAtIndex:self.messagesArray.count-1 animated:YES];
             [self.myCarousel scrollToItemAtIndex:self.messagesArray.count-1 animated:YES];
         }
     }
+}
+
+-(void)updateAddress:(int)index{
+    NSDictionary *dict= [self.addressArray objectAtIndex:index];
+    self.lbl_address.text = [dict objectForKey:@"address"];
 }
 
 -(void)rangingFailedWithError:(NSString *)error{
@@ -127,15 +153,5 @@
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
