@@ -22,6 +22,8 @@
 		51793F3E1AB1D92800542C1F /* VisitorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51793F3C1AB1D92800542C1F /* VisitorViewController.xib */; };
 		51793F411AB1DD8000542C1F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F401AB1DD8000542C1F /* iCarousel.m */; };
 		51793F441AB1E2E400542C1F /* BeaconRanging.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F431AB1E2E400542C1F /* BeaconRanging.m */; };
+		51793F481AB1EE9B00542C1F /* VisitorInteractController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F471AB1EE9B00542C1F /* VisitorInteractController.m */; };
+		51793F4A1AB1F18C00542C1F /* VisitorInteractController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51793F491AB1F18C00542C1F /* VisitorInteractController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		51793F401AB1DD8000542C1F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		51793F421AB1E2E400542C1F /* BeaconRanging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRanging.h; sourceTree = "<group>"; };
 		51793F431AB1E2E400542C1F /* BeaconRanging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconRanging.m; sourceTree = "<group>"; };
+		51793F461AB1EE9B00542C1F /* VisitorInteractController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitorInteractController.h; sourceTree = "<group>"; };
+		51793F471AB1EE9B00542C1F /* VisitorInteractController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitorInteractController.m; sourceTree = "<group>"; };
+		51793F491AB1F18C00542C1F /* VisitorInteractController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorInteractController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,9 @@
 				51793F3A1AB1D92800542C1F /* VisitorViewController.h */,
 				51793F3B1AB1D92800542C1F /* VisitorViewController.m */,
 				51793F3C1AB1D92800542C1F /* VisitorViewController.xib */,
+				51793F461AB1EE9B00542C1F /* VisitorInteractController.h */,
+				51793F471AB1EE9B00542C1F /* VisitorInteractController.m */,
+				51793F491AB1F18C00542C1F /* VisitorInteractController.xib */,
 				51793F291AB1C62400542C1F /* RangeBeacons.h */,
 				51793F2A1AB1C62400542C1F /* RangeBeacons.m */,
 				51793F421AB1E2E400542C1F /* BeaconRanging.h */,
@@ -203,7 +211,7 @@
 				TargetAttributes = {
 					51793EFF1AB1C5F800542C1F = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = NJTZ42342L;
+						DevelopmentTeam = G53B5LQ693;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -240,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51793F4A1AB1F18C00542C1F /* VisitorInteractController.xib in Resources */,
 				51793F141AB1C5F800542C1F /* LaunchScreen.xib in Resources */,
 				51793F2F1AB1D0D000542C1F /* ViewController.xib in Resources */,
 				51793F111AB1C5F800542C1F /* Images.xcassets in Resources */,
@@ -270,6 +279,7 @@
 				51793F331AB1D88B00542C1F /* EmployeeController.m in Sources */,
 				51793F411AB1DD8000542C1F /* iCarousel.m in Sources */,
 				51793F061AB1C5F800542C1F /* main.m in Sources */,
+				51793F481AB1EE9B00542C1F /* VisitorInteractController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +330,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -340,6 +351,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1980bb44-b2f5-44ce-b519-a807ecc5c391";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -361,7 +373,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -374,6 +387,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "1980bb44-b2f5-44ce-b519-a807ecc5c391";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -383,10 +397,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< Updated upstream:HMH Diksuchi.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "HMH Diksuchi";
+=======
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1980bb44-b2f5-44ce-b519-a807ecc5c391";
+>>>>>>> Stashed changes:HMHDiksuchi.xcodeproj/project.pbxproj
 			};
 			name = Debug;
 		};
@@ -394,10 +413,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRAVEEN RAJAPPAN (DU52HVXGPL)";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< Updated upstream:HMH Diksuchi.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "HMH Diksuchi";
+=======
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1980bb44-b2f5-44ce-b519-a807ecc5c391";
+>>>>>>> Stashed changes:HMHDiksuchi.xcodeproj/project.pbxproj
 			};
 			name = Release;
 		};
