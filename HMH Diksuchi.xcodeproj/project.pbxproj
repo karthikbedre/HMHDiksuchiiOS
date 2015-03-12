@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51793F001AB1C5F800542C1F /* HMHDiksuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMHDiksuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51793F001AB1C5F800542C1F /* HMH Diksuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HMH Diksuchi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51793F041AB1C5F800542C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51793F051AB1C5F800542C1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51793F071AB1C5F800542C1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		51793F0B1AB1C5F800542C1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		51793F101AB1C5F800542C1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		51793F131AB1C5F800542C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		51793F191AB1C5F800542C1F /* HMHDiksuchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMHDiksuchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51793F191AB1C5F800542C1F /* HMH DiksuchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HMH DiksuchiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51793F1E1AB1C5F800542C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51793F1F1AB1C5F800542C1F /* HMHDiksuchiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMHDiksuchiTests.m; sourceTree = "<group>"; };
 		51793F291AB1C62400542C1F /* RangeBeacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeBeacons.h; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		51793F011AB1C5F800542C1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51793F001AB1C5F800542C1F /* HMHDiksuchi.app */,
-				51793F191AB1C5F800542C1F /* HMHDiksuchiTests.xctest */,
+				51793F001AB1C5F800542C1F /* HMH Diksuchi.app */,
+				51793F191AB1C5F800542C1F /* HMH DiksuchiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51793EFF1AB1C5F800542C1F /* HMHDiksuchi */ = {
+		51793EFF1AB1C5F800542C1F /* HMH Diksuchi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51793F231AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMHDiksuchi" */;
+			buildConfigurationList = 51793F231AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMH Diksuchi" */;
 			buildPhases = (
 				51793EFC1AB1C5F800542C1F /* Sources */,
 				51793EFD1AB1C5F800542C1F /* Frameworks */,
@@ -169,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = HMHDiksuchi;
+			name = "HMH Diksuchi";
 			productName = HMHDiksuchi;
-			productReference = 51793F001AB1C5F800542C1F /* HMHDiksuchi.app */;
+			productReference = 51793F001AB1C5F800542C1F /* HMH Diksuchi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		51793F181AB1C5F800542C1F /* HMHDiksuchiTests */ = {
+		51793F181AB1C5F800542C1F /* HMH DiksuchiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51793F261AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMHDiksuchiTests" */;
+			buildConfigurationList = 51793F261AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMH DiksuchiTests" */;
 			buildPhases = (
 				51793F151AB1C5F800542C1F /* Sources */,
 				51793F161AB1C5F800542C1F /* Frameworks */,
@@ -187,9 +187,9 @@
 			dependencies = (
 				51793F1B1AB1C5F800542C1F /* PBXTargetDependency */,
 			);
-			name = HMHDiksuchiTests;
+			name = "HMH DiksuchiTests";
 			productName = HMHDiksuchiTests;
-			productReference = 51793F191AB1C5F800542C1F /* HMHDiksuchiTests.xctest */;
+			productReference = 51793F191AB1C5F800542C1F /* HMH DiksuchiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 51793EFB1AB1C5F800542C1F /* Build configuration list for PBXProject "HMHDiksuchi" */;
+			buildConfigurationList = 51793EFB1AB1C5F800542C1F /* Build configuration list for PBXProject "HMH Diksuchi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51793EFF1AB1C5F800542C1F /* HMHDiksuchi */,
-				51793F181AB1C5F800542C1F /* HMHDiksuchiTests */,
+				51793EFF1AB1C5F800542C1F /* HMH Diksuchi */,
+				51793F181AB1C5F800542C1F /* HMH DiksuchiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +286,7 @@
 /* Begin PBXTargetDependency section */
 		51793F1B1AB1C5F800542C1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 51793EFF1AB1C5F800542C1F /* HMHDiksuchi */;
+			target = 51793EFF1AB1C5F800542C1F /* HMH Diksuchi */;
 			targetProxy = 51793F1A1AB1C5F800542C1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -386,7 +386,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HMH Diksuchi";
 			};
 			name = Debug;
 		};
@@ -397,7 +397,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HMH Diksuchi";
 			};
 			name = Release;
 		};
@@ -415,7 +415,7 @@
 				);
 				INFOPLIST_FILE = HMHDiksuchiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HMH DiksuchiTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HMHDiksuchi.app/HMHDiksuchi";
 			};
 			name = Debug;
@@ -430,7 +430,7 @@
 				);
 				INFOPLIST_FILE = HMHDiksuchiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HMH DiksuchiTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HMHDiksuchi.app/HMHDiksuchi";
 			};
 			name = Release;
@@ -438,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51793EFB1AB1C5F800542C1F /* Build configuration list for PBXProject "HMHDiksuchi" */ = {
+		51793EFB1AB1C5F800542C1F /* Build configuration list for PBXProject "HMH Diksuchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51793F211AB1C5F800542C1F /* Debug */,
@@ -447,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51793F231AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMHDiksuchi" */ = {
+		51793F231AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMH Diksuchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51793F241AB1C5F800542C1F /* Debug */,
@@ -456,7 +456,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51793F261AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMHDiksuchiTests" */ = {
+		51793F261AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMH DiksuchiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51793F271AB1C5F800542C1F /* Debug */,
