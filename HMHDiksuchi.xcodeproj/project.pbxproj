@@ -198,7 +198,7 @@
 				TargetAttributes = {
 					51793EFF1AB1C5F800542C1F = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = G53B5LQ693;
+						DevelopmentTeam = NJTZ42342L;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -377,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,7 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Houghton Mifflin Harcourt Publishing Company";
 				INFOPLIST_FILE = HMHDiksuchi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +448,7 @@
 				51793F251AB1C5F800542C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51793F261AB1C5F800542C1F /* Build configuration list for PBXNativeTarget "HMHDiksuchiTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +457,7 @@
 				51793F281AB1C5F800542C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
