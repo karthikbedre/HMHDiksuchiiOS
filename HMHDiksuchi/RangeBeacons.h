@@ -20,6 +20,7 @@
 
 @property(nonatomic, strong)    CLLocationManager       *locationManager;
 @property(nonatomic, weak)      id<RangingDelegate>     rangeDelegate;
+@property NSMutableDictionary *beacons;
 
 -(void)startRangingBeacons;
 

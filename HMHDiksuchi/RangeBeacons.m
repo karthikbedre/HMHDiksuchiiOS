@@ -19,6 +19,10 @@
 @synthesize rangeDelegate;
 
 -(void)startRangingBeacons{
+    
+
+    self.beacons = [[NSMutableDictionary alloc] init];
+    
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.delegate=self;
@@ -58,11 +62,20 @@
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
--(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region{
-    if(beacons.count>0){
-        [self.rangeDelegate RangedBeacons:beacons];
-    }
-}
+//-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region{
+//    if(beacons.count>0){
+//        [self.rangeDelegate RangedBeacons:beacons];
+//        for (NSNumber *range in @[@(CLProximityUnknown), @(CLProximityImmediate), @(CLProximityNear), @(CLProximityFar)])
+//        {
+//            NSArray *proximityBeacons = [allBeacons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"proximity = %d", [range intValue]]];
+//            if([proximityBeacons count])
+//            {
+//                self.beacons[range] = proximityBeacons;
+//            }
+//        }
+//
+//    }
+//}
 
 
 @end

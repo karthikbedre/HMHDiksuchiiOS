@@ -21,6 +21,7 @@
 		51793F3D1AB1D92800542C1F /* VisitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F3B1AB1D92800542C1F /* VisitorViewController.m */; };
 		51793F3E1AB1D92800542C1F /* VisitorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51793F3C1AB1D92800542C1F /* VisitorViewController.xib */; };
 		51793F411AB1DD8000542C1F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F401AB1DD8000542C1F /* iCarousel.m */; };
+		51793F441AB1E2E400542C1F /* BeaconRanging.m in Sources */ = {isa = PBXBuildFile; fileRef = 51793F431AB1E2E400542C1F /* BeaconRanging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		51793F3C1AB1D92800542C1F /* VisitorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorViewController.xib; sourceTree = "<group>"; };
 		51793F3F1AB1DD8000542C1F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		51793F401AB1DD8000542C1F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		51793F421AB1E2E400542C1F /* BeaconRanging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRanging.h; sourceTree = "<group>"; };
+		51793F431AB1E2E400542C1F /* BeaconRanging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconRanging.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				51793F3C1AB1D92800542C1F /* VisitorViewController.xib */,
 				51793F291AB1C62400542C1F /* RangeBeacons.h */,
 				51793F2A1AB1C62400542C1F /* RangeBeacons.m */,
+				51793F421AB1E2E400542C1F /* BeaconRanging.h */,
+				51793F431AB1E2E400542C1F /* BeaconRanging.m */,
 				51793F3F1AB1DD8000542C1F /* iCarousel.h */,
 				51793F401AB1DD8000542C1F /* iCarousel.m */,
 				51793F031AB1C5F800542C1F /* Supporting Files */,
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51793F441AB1E2E400542C1F /* BeaconRanging.m in Sources */,
 				51793F3D1AB1D92800542C1F /* VisitorViewController.m in Sources */,
 				51793F0C1AB1C5F800542C1F /* ViewController.m in Sources */,
 				51793F2B1AB1C62400542C1F /* RangeBeacons.m in Sources */,
