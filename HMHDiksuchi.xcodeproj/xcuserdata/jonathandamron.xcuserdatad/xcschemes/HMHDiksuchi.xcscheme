@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51793EFF1AB1C5F800542C1F"
-               BuildableName = "HMH Diksuchi.app"
-               BlueprintName = "HMH Diksuchi"
-               ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+               BuildableName = "HMHDiksuchi.app"
+               BlueprintName = "HMHDiksuchi"
+               ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51793F181AB1C5F800542C1F"
-               BuildableName = "HMH DiksuchiTests.xctest"
-               BlueprintName = "HMH DiksuchiTests"
-               ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+               BuildableName = "HMHDiksuchiTests.xctest"
+               BlueprintName = "HMHDiksuchiTests"
+               ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51793F181AB1C5F800542C1F"
-               BuildableName = "HMH DiksuchiTests.xctest"
-               BlueprintName = "HMH DiksuchiTests"
-               ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+               BuildableName = "HMHDiksuchiTests.xctest"
+               BlueprintName = "HMHDiksuchiTests"
+               ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51793EFF1AB1C5F800542C1F"
-            BuildableName = "HMH Diksuchi.app"
-            BlueprintName = "HMH Diksuchi"
-            ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+            BuildableName = "HMHDiksuchi.app"
+            BlueprintName = "HMHDiksuchi"
+            ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51793EFF1AB1C5F800542C1F"
-            BuildableName = "HMH Diksuchi.app"
-            BlueprintName = "HMH Diksuchi"
-            ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+            BuildableName = "HMHDiksuchi.app"
+            BlueprintName = "HMHDiksuchi"
+            ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51793EFF1AB1C5F800542C1F"
-            BuildableName = "HMH Diksuchi.app"
-            BlueprintName = "HMH Diksuchi"
-            ReferencedContainer = "container:HMH Diksuchi.xcodeproj">
+            BuildableName = "HMHDiksuchi.app"
+            BlueprintName = "HMHDiksuchi"
+            ReferencedContainer = "container:HMHDiksuchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

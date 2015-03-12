@@ -12,6 +12,7 @@
 
 @interface VisitorInteractController : UIViewController<RangeBeaconDelegates>
 
-@property(nonatomic, strong) IBOutlet iCarousel *myCarousel;
+@property(nonatomic, strong) IBOutlet   iCarousel   *myCarousel;
+@property(nonatomic, weak) IBOutlet     UILabel     *lbl_name,*lbl_address;
 
 @end
