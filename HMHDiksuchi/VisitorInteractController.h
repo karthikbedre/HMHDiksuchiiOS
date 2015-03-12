@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
+#import "BeaconRanging.h"
 
-<<<<<<< HEAD
 @interface VisitorInteractController : UIViewController<RangeBeaconDelegates>
 
-@property(nonatomic, strong) IBOutlet   iCarousel   *myCarousel;
-@property(nonatomic, weak) IBOutlet     UILabel     *lbl_name,*lbl_address;
-=======
-@interface VisitorInteractController : UIViewController
->>>>>>> parent of 1d8fab3... Added Carousel Control to display Beacon Messages.
+@property(nonatomic, strong) IBOutlet iCarousel *myCarousel;
 
 @end

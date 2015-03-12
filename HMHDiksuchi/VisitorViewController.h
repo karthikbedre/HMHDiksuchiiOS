@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iCarousel.h"
-#import "BeaconRanging.h"
 
-@interface VisitorViewController : UIViewController<RangeBeaconDelegates>
+@interface VisitorViewController : UIViewController
 
 @end
