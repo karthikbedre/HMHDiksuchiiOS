@@ -10,8 +10,7 @@
 
 @interface VisitorViewController ()
 
-@property(nonatomic, strong)  RangeBeacons        *moniterBeacons;
-
+@property(nonatomic, strong)  BeaconRanging         *beaconRanging;
 @end
 
 @implementation VisitorViewController
@@ -28,15 +27,49 @@
 }
 
 -(void)initializeRanging{
-    if(!self.moniterBeacons){
-        self.moniterBeacons = [[RangeBeacons alloc]init];
-        [self.moniterBeacons startRangingBeacons];
-        self.moniterBeacons.rangeDelegate = self;
+    
+    if(!self.beaconRanging){
+        self.beaconRanging = [[BeaconRanging alloc]init];
+        self.beaconRanging.rangeBeaconDelegate=self;
+        [self.beaconRanging startMonitoringWithProximityTypes:@[@(CLProximityNear),@(CLProximityFar),@(CLProximityImmediate)]];
     }
 }
 
--(void)RangedBeacons:(NSArray *)beacons{
-    NSLog(@"%@",beacons);
+#pragma mark Range Beacon Delegates
+
+-(void)rangedBeacons:(NSArray *)beacons{
+    if(beacons.count>0)
+        NSLog(@"%@",[beacons firstObject]);
+}
+
+-(void)rangingFailedWithError:(NSString *)error{
+    
+}
+
+-(void)exitedRegion:(CLRegion *)region locationManager :(CLLocationManager *)locationManager{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    // current time plus 10 secs
+    NSDate *now = [NSDate date];
+    
+    localNotification.fireDate = now;
+    localNotification.alertBody = @"Hi there!! Welcome to HMH, slide through to get navigated.4";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+-(void)enteredRegion:(CLRegion *)region{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+    // current time plus 10 secs
+    NSDate *now = [NSDate date];
+    
+    localNotification.fireDate = now;
+    localNotification.alertBody = @"Hi there!! Welcome to HMH, slide through to get navigated.4";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (void)didReceiveMemoryWarning {
